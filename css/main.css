@@ -16,8 +16,9 @@ body {
 }
 .footer .left,
 .footer .right {
-  position: relative;
-  top: 50%;
+  vertical-align: center;
+  /*position: relative;*/
+  /*top: 50%;*/
   /*transform: translateY(-50%);*/
   /*margin: 20px 0;*/
 }
