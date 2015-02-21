@@ -15,7 +15,8 @@ body {
 }
 .footer .left,
 .footer .right {
-  height: 60px;
+  overflow: hidden;
+  /*height: 60px;*/
   margin: 20px 0;
 }
 .main {
@@ -39,7 +40,6 @@ body {
   height: 100%;
 }
 .left {
-  margin: 20px 0;
   float: left;
 }
 .right {
