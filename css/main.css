@@ -38,8 +38,10 @@ body {
   height: 100%;
 }
 .left {
+  margin: 20px 0;
   float: left;
 }
 .right {
+  margin: 20px 0;
   float: right;
 }
