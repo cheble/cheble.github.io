@@ -13,8 +13,9 @@ body {
   height: 60px;
   background-color: #ededed;
 }
-.footer.left,
-.footer.right {
+.footer .left,
+.footer .right {
+  height: 60px;
   margin: 20px 0;
 }
 .main {
@@ -42,6 +43,5 @@ body {
   float: left;
 }
 .right {
-  margin: 20px 0;
   float: right;
 }
