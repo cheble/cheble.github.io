@@ -49,6 +49,7 @@ body {
 }
 .social-btn {
   padding: 0px 2px 0px 2px;
+  line-height: 30px;
   display: inline-block;
   vertical-align: middle;
 }
