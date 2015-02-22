@@ -44,12 +44,13 @@ body {
 }
 .footer .left,
 .footer .right {
-  padding-top: 15px;
-  height: 30px;
-  line-height: 30px;
+  height: 60px;
+  line-height: 60px;
 }
-.btn.social-btn {
+.social-btn {
   padding: 0px 2px 0px 2px;
+  display: inline-block;
+  vertical-align: middle;
 }
 .social-btn .fa {
   font-size: 1.5em;
@@ -58,6 +59,7 @@ body {
   height: 30px;
   line-height: 30px;
   text-align: center;
+  vertical-align: middle;
   border-radius: 5px;
   color: rgba(255, 255, 255, 1);
   background-color:#000;
