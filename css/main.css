@@ -48,16 +48,16 @@ body {
   line-height: 60px;
 }
 .social-btn {
-  padding: 0px 2px 0px 2px;
+  margin: 0px 0px 0px 4px;
+  height: 30px;
+  width: 30px;
   line-height: 30px;
   display: inline-block;
   vertical-align: middle;
 }
 .social-btn .fa {
   font-size: 1.5em;
-  display: inline-block;
-  width: 30px;
-  height: 30px;
+  display: block;
   line-height: 30px;
   text-align: center;
   vertical-align: middle;
