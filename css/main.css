@@ -18,8 +18,8 @@ body {
 .footer .right {
   /*position: relative;*/
   /*top: 50%;*/
-  transform: translateY(-50%);
-  margin: 20px 0;
+  /*transform: translateY(-50%);*/
+  /*margin: 20px 0;*/
 }
 .main {
   padding: 40px 15px;
