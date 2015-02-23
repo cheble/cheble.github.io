@@ -1,0 +1,115 @@
+{
+  "basics": {
+    "name": "Chase Heble",
+    "label": "Computer Engineer",
+    "picture": "",
+    "email": "chase.heble@gmail.com",
+    "phone": "(402) 988-8388",
+    "website": "cheble.github.io",
+    "summary": "Chase grew up in the small town of Adams, NE. I enjoyed hanging out with my friends and wrestling for Freeman High School. In the summers I either worked at the concession stand at the ballpark, or mowed lawns. After I graduated from Freeman, I enrolled at University of Nebraska-Lincoln. I am currently looking for a full-time position in software development for after my graduation in May 2015.",
+    "location": {
+      "address": "1025 N 63rd St B-102",
+      "postalCode": "68505",
+      "city": "Lincoln",
+      "countryCode": "US",
+      "region": "Nebraska"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "cheble",
+        "url": "https://github.com/cheble"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "chaseheble",
+        "url": "https://www.linkedin.com/in/chaseheble"
+      },
+      {
+        "network": "Google+",
+        "username": "chase.heble",
+        "url": "https://plus.google.com/103401304498551996028/"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "GC Image, LLC",
+      "position": "Software Programming Intern",
+      "website": "http://www.gcimage.com/",
+      "startDate": "2013-04-01",
+      "endDate": "Present",
+      "summary": "GC Image is a small computer software company located in Lincoln, NE. We create a suite of software for gas and liquid 2-D chromatography.",
+      "highlights": [
+        "Worked on large-scale Java programs",
+        "Responsible for code implementation, testing, and debugging",
+        "Used Bugzilla and CVS for project management"
+      ]
+    }
+  ],
+  "volunteer": [],
+  "education": [
+    {
+      "institution": "University of Nebraska-Lincoln",
+      "area": "Computer Engineering",
+      "studyType": "Bachelor",
+      "startDate": "2010-08-01",
+      "endDate": "2015-05-09",
+      "gpa": "3.833",
+      "courses": []
+    }
+  ],
+  "awards": [],
+  "publications": [],
+  "skills": [
+    {
+      "name": "Dominant Languages",
+      "level": "Proficient",
+      "keywords": [
+        "Java",
+        "C/C++",
+        "SQL",
+        "PHP",
+        "HTML",
+        "Javascript"
+      ]
+    },
+    {
+      "name": "Basic Knowledge",
+      "level": "Limited",
+      "keywords": [
+        "WebGL",
+        "MatLab",
+        "Android Development",
+        "iOS Development",
+        "Web Development"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Native speaker"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Music",
+      "keywords": [
+        "Electronic",
+        "Classic Rock",
+        "Folk",
+        "Indie-Pop"
+      ]
+    },
+    {
+      "name": "Video Games",
+      "keywords": [
+        "Total War",
+        "Battlefield",
+        "Elder Scrolls"
+      ]
+    }
+  ],
+  "references": []
+}
