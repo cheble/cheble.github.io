@@ -55,6 +55,12 @@ body {
   display: inline-block;
   vertical-align: middle;
 }
+.social-btn a:link,
+.social-btn .a:visited,
+.social-btn .a:hover,
+.social-btn .a:active {
+  text-decoration: none;
+}
 .social-btn .fa {
   font-size: 1.5em;
   display: block;
