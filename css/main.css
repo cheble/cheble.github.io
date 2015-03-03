@@ -2,18 +2,6 @@ html {
   position: relative;
   min-height: 100%;
 }
-header, header a {
-  background-color: #2196F3;
-  color: #424242;
-  text-shadow: none !important;
-  text-decoration: none !important;
-}
-header .icon-bar {
-  background-color: #424242 !important;
-}
-.navbar-brand:focus, .navbar-brand:hover {
-  color: #EEEEEE !important;
-}
 body {
   margin-bottom: 60px;
 }

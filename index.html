@@ -9,44 +9,39 @@
     <meta name="author" content="Chase Heble">
     <!--<link rel="icon" href="/code10.png">-->
 
-    <!-- JQuery -->
-    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <!-- ******************** Stylesheets ********************* -->
     <!--  Font Awesome -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-    <!-- Bootstrap theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-    <!-- Bootstrap JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-
+    <!-- Bootstrap theme https://github.com/FezVrasta/bootstrap-material-design -->
+    <link href="css/ripples.min.css" rel="stylesheet">
+    <link href="css/material-wfont.min.css" rel="stylesheet">
     <!-- Main Stylesheet -->
     <link href="/css/main.css" rel="stylesheet">
+    <!-- ****************** END Stylesheets ******************* -->
   </head>
   <body>
     <!-- ******************* Navigation Bar ******************* -->
-    <header class="navbar navbar-static-top" id="top" role="banner">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
+
+    <div class="navbar navbar-default">
+      <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="./">Chase Heble</a>
-        </div>
-        <nav id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="./">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/resume">Resume</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-      </nav>
+          <a class="navbar-brand" href="javascript:void(0)">Chase Heble</a>
       </div>
-    </header>
+      <div class="navbar-collapse collapse navbar-responsive-collapse">
+          <ul class="nav navbar-nav">
+              <li class="active"><a href="./">Home</a></li>
+              <li><a href="/about">About Me</a></li>
+              <li><a href="/resume">Resume</a></li>
+              <li><a href="/projects">Projects</a></li>
+          </ul>
+      </div>
+    </div>
     <!-- ***************** END Navigation Bar ***************** -->
 
     <!-- ******************** Main Content ******************** -->
@@ -85,5 +80,20 @@
       </div>
     </footer>
     <!-- ********************* END Footer ********************* -->
+
+    <!-- ********************* Javascript ********************* -->
+    <!-- JQuery -->
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+    <script src="js/ripples.min.js"></script>
+    <script src="js/material.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $.material.init();
+        });
+    </script>
+    <!-- ******************* END Javascript ******************* -->
   </body>
 </html>
