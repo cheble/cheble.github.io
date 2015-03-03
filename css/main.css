@@ -5,6 +5,10 @@ html {
 body {
   margin-bottom: 60px;
 }
+.name {
+  text-align: center;
+  font-size: 100px;
+}
 .footer {
   position: absolute;
   overflow: hidden;
