@@ -2,6 +2,8 @@
 layout: default
 title: Resume
 nav: Resume
+
+resume: site.data.resume
 ---
 
 <header id="header">
@@ -9,10 +11,10 @@ nav: Resume
 		<div class="row">
 			<div class="col-sm-9 col-sm-push-3">
 				<h1>
-					{{ site.data.resume.basics.name }}
+					{{ resume.basics.name }}
 				</h1>
 				<h2>
-					Programmer
+          {{ resume.basics.label }}
 				</h2>
 			</div>
 		</div>
@@ -25,20 +27,34 @@ nav: Resume
 		</aside>
 		<div class="col-sm-9">
 			<div class="row">
-			<div class="col-sm-6">
-				<strong>Email</strong>
-				<div class="email">richard.hendriks@mail.com</div>
-			</div>
-			<div class="col-sm-6">
-				<strong>Phone</strong>
-				<div class="phone">(912) 555-4321</div>
-			</div>
-			<div class="col-sm-6">
-				<strong>Website</strong>
-				<div class="website">
-					<a href="http://richardhendricks.com">http://richardhendricks.com</a>
-				</div>
-			</div>
+        {% if resume.basics.email %}
+  			<div class="col-sm-6">
+  				<strong>Email</strong>
+  				<div class="email">{{ resume.basics.email }}</div>
+  			</div>
+        {% endif %}
+        {% if resume.basics.phone %}
+  			<div class="col-sm-6">
+  				<strong>Phone</strong>
+  				<div class="phone">{{ resume.basics.phone }}</div>
+  			</div>
+        {% endif %}
+        {% if resume.basics.website %}
+  			<div class="col-sm-6">
+  				<strong>Website</strong>
+  				<div class="website">
+  					<a href="{{ resume.basics.website }}">{{ resume.basics.website }}</a>
+  				</div>
+  			</div>
+        {% endif %}
+        {% if resume.basics.email %}
+        {% if resume.basics.location %}
+  			<div class="col-sm-6">
+  				<strong>Location</strong>
+  				<div class="location">{{ resume.basics.location.city }}, {{resume.basics.location.region}}</div>
+  			</div>
+        {% endif %}
+        {% if resume.basics.location %}
 			</div>
 		</div>
 	</section>
