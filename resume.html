@@ -55,28 +55,35 @@ nav: Resume
 			</div>
 		</div>
 	</section>
+  {% if resume.basics.summary %}
 	<section id="about" class="row">
 		<aside class="col-sm-3">
 			<h3>About</h3>
 		</aside>
 		<div class="col-sm-9">
-			<p>Richard hails from Tulsa. He has earned degrees from the University of Oklahoma and Stanford. (Go Sooners and Cardinals!) Before starting Pied Piper, he worked for Hooli as a part time software developer. While his work focuses on applied information theory, mostly optimizing lossless compression schema of both the length-limited and adaptive variants, his non-work interests range widely, everything from quantum computing to chaos theory. He could tell you about it, but THAT would NOT be a “length-limited” conversation!</p>
+			<p>{{ resume.basics.summary }}</p>
 		</div>
 	</section>
+  {% endif %}
+  {% if resume.basics.profiles[0] %}
 	<section id="profiles" class="row">
 		<aside class="col-sm-3">
 			<h3>Profiles</h3>
 		</aside>
 		<div class="col-sm-9">
 			<div class="row">
+        {% for profile in resume.basics.profiles %}
 				<div class="col-sm-6">
 					<strong class="network">
-						Twitter
+						{{ profile.network }}
 					</strong>
 					<div class="username">
-							neutralthoughts
+						<div class="url">
+							<a href="{{ profile.url }}">{{ profile.username }}</a>
+						</div>
 					</div>
 				</div>
+        {% endfor %}
 				<div class="col-sm-6">
 					<strong class="network">
 						SoundCloud
@@ -90,7 +97,7 @@ nav: Resume
 			</div>
 		</div>
 	</section>
-
+  {% endif %}
 	<section id="work" class="row">
 		<aside class="col-sm-3">
 			<h3>Work</h3>
