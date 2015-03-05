@@ -116,7 +116,7 @@ nav: Resume
 				<h4>Highlights</h4>
 				<ul class="highlights">
 					{% for highlight in job.highlights %}
-					<li class="bullet">{{ hightlight }}</li>
+					<li class="bullet">{{ highlight }}</li>
 					{% endfor %}
 				</ul>
 			</div>
@@ -135,7 +135,7 @@ nav: Resume
 			<div class="col-sm-12">
 				<h4 class="strike-through">
 					<span>{{ e.organization }}</span>
-					<span class="date">
+					<span class="date right">
 						{{ e.startDate }} — {{ e.endDate }}
 					</span>
 				</h4>
@@ -171,7 +171,7 @@ nav: Resume
 			<div class="col-sm-12">
 				<h4 class="strike-through">
 					<span>{{ e.institution }}</span>
-					<span class="date">
+					<span class="date right">
 						{{ e.startDate }} — {{ e.endDate }}
 					</span>
 				</h4>
@@ -180,7 +180,7 @@ nav: Resume
 						{{ e.area }}
 					</span>
 					<span class="studyType">
-						{{ e.studyType }}
+						&mdash;{{ e.studyType }}
 					</span>
 					<span class="gpa">
 						({{ e.gpa }})
@@ -267,26 +267,18 @@ nav: Resume
 		</aside>
 		<div class="col-sm-9">
 			<div class="row">
+			{% for skill in resume.skills %}
 			<div class="col-sm-6">
 				<div class="name">
-					<h4>Web Development</h4>
+					<h4>{{ skill.name }}</h4>
 				</div>
 				<ul class="keywords">
-					<li>HTML</li>
-					<li>CSS</li>
-					<li>Javascript</li>
+					{% for keyword in skill.keywords %}
+					<li>{{ keyword }}</li>
+					{% endfor %}
 				</ul>
 			</div>
-			<div class="col-sm-6">
-				<div class="name">
-					<h4>Compression</h4>
-				</div>
-				<ul class="keywords">
-					<li>Mpeg</li>
-					<li>MP4</li>
-					<li>GIF</li>
-				</ul>
-			</div>
+			{% endfor %}
 			</div>
 		</div>
 	</section>
@@ -297,14 +289,16 @@ nav: Resume
 		</aside>
 		<div class="col-sm-9">
 			<div class="row">
+			{% for lang in resume.languages %}
 			<div class="col-sm-6">
 				<div class="language">
-					<strong>English</strong>
+					<strong>{{ lang.language }}</strong>
 				</div>
 				<div class="fluency">
-					Native speaker
+					{{ lang.fluency }}
 				</div>
 			</div>
+			{% endfor %}
 			</div>
 		</div>
 	</section>
@@ -315,35 +309,42 @@ nav: Resume
 		</aside>
 		<div class="col-sm-9">
 			<div class="row">
+			{% for interest in resume.interests %}
 			<div class="col-sm-6">
 				<div class="name">
-					<h4>Wildlife</h4>
+					<h4>{{ interest.name }}</h4>
 				</div>
 				<ul class="keywords">
-					<li>Ferrets</li>
-					<li>Unicorns</li>
+					{% for keyword in interest.keywords %}
+					<li>{{ keyword }}</li>
+					{% endfor %}
 				</ul>
 			</div>
+			{% endfor %}
 			</div>
 		</div>
 	</section>
 
+	{% if resume.publications[0] %}
 	<section id="references" class="row">
 		<aside class="col-sm-3">
 			<h3>References</h3>
 		</aside>
 		<div class="col-sm-9">
 			<div class="row">
+			{% for reference in resume.references %}
 			<div class="col-sm-12">
 				<blockquote class="reference">
-					<p>It is my pleasure to recommend Richard, his performance working as a consultant for Main St. Company proved that he will be a valuable addition to any company.</p>
+					<p>{{ reference.reference }}</p>
 					<p class="name">
-						<strong>— Erlich Bachman</strong>
+						<strong>— {{ reference.name }}</strong>
 					</p>
 				</blockquote>
 			</div>
+			{% endfor %}
 			</div>
 		</div>
 	</section>
+	{% endif %}
 
 </div>
