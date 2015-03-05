@@ -92,148 +92,173 @@ nav: Resume
 		<aside class="col-sm-3">
 			<h3>Work</h3>
 		</aside>
+		{% for job in resume.work %}
 		<div class="col-sm-9">
 			<div class="row">
 			<div class="col-sm-12">
 				<h4 class="strike-through">
-					<span>Pied Piper</span>
+					<span>{{ job.company }}</span>
 					<span class="date">
-						2013-12-01 — 2014-12-01
+						{{ job.startDate }} — {{ job.endDate }}
 					</span>
 				</h4>
+				{% if job.website %}
 				<div class="website pull-right">
-					<a href="http://piedpiper.com">http://piedpiper.com</a>
+					<a href="{{ job.website }}">{{ job.website }}</a>
 				</div>
+				{% endif %}
 				<div class="position">
-					CEO/President
+					{{ job.position }}
 				</div>
 				<div class="summary">
-					<p>Pied Piper is a multi-platform technology based on a proprietary universal compression algorithm that has consistently fielded high Weisman Scores™ that are not merely competitive, but approach the theoretical limit of lossless compression.</p>
+					<p>{{ job.summary }}</p>
 				</div>
 				<h4>Highlights</h4>
 				<ul class="highlights">
-					<li class="bullet">Build an algorithm for artist to detect if their music was violating copy right infringement laws</li>
-					<li class="bullet">Successfully won Techcrunch Disrupt</li>
-					<li class="bullet">Optimized an algorithm that holds the current world record for Weisman Scores</li>
+					{% for highlight in job.highlights %}
+					<li class="bullet">{{ hightlight }}</li>
+					{% endfor %}
 				</ul>
 			</div>
 			</div>
 		</div>
+		{% endfor %}
 	</section>
-
+	{% if resume.basics.volunteer[0] %}
 	<section id="volunteer" class="row">
 		<aside class="col-sm-3">
 			<h3>Volunteer</h3>
 		</aside>
+		{% for e in volunteer %}
 		<div class="col-sm-9">
 			<div class="row">
 			<div class="col-sm-12">
 				<h4 class="strike-through">
-					<span>CoderDojo</span>
+					<span>{{ e.organization }}</span>
 					<span class="date">
-						2012-01-01 — 2013-01-01
+						{{ e.startDate }} — {{ e.endDate }}
 					</span>
 				</h4>
 				<div class="website pull-right">
-					<a href="http://coderdojo.com/">http://coderdojo.com/</a>
+					<a href="{{ e.website }}">{{ e.website }}</a>
 				</div>
 				<div class="position">
-					Teacher
+					{{ e.position }}
 				</div>
 				<div class="summary">
-					<p>Global movement of free coding clubs for young people.</p>
+					<p>{{ e.summary }}</p>
 				</div>
 				<h4>Highlights</h4>
 				<ul class="highlights">
-					<li class="bullet">Awarded &#x27;Teacher of the Month&#x27;</li>
+					{% for highlight in e.highlights %}
+					<li class="bullet">{{ hightlight }}</li>
+					{% endfor %}
 				</ul>
 			</div>
 			</div>
 		</div>
+		{% endfor %}
 	</section>
+	{% endif %}
 
 	<section id="education" class="row">
 		<aside class="col-sm-3">
 			<h3>Education</h3>
 		</aside>
+		{% for e in resume.education %}
 		<div class="col-sm-9">
 			<div class="row">
 			<div class="col-sm-12">
 				<h4 class="strike-through">
-					<span>University of Oklahoma</span>
+					<span>{{ e.institution }}</span>
 					<span class="date">
-						2011-06-01 — 2014-01-01
+						{{ e.startDate }} — {{ e.endDate }}
 					</span>
 				</h4>
-				<div class="area">
-					Information Technology
+				<div>
+					<span class="area">
+						{{ e.area }}
+					</span>
+					<span class="studyType">
+						{{ e.studyType }}
+					</span>
+					<span class="gpa">
+						({{ e.gpa }})
+					</span>
 				</div>
-				<div class="studyType">
-					Bachelor
-				</div>
+				{% if e.courses[0] %}
 				<h4>Courses</h4>
 				<ul class="courses">
-					<li>DB1101 - Basic SQL</li>
-					<li>CS2011 - Java Introduction</li>
+					{% for course in e.courses %}
+					<li>{{ course }}</li>
+					{% endfor %}
 				</ul>
+				{% endif %}
 			</div>
 			</div>
 		</div>
 	</section>
-
+	{% if resume.awards[0] %}
 	<section id="awards" class="row">
 		<aside class="col-sm-3">
 			<h3>Awards</h3>
 		</aside>
+		{% for award in resume.awards %}
 		<div class="col-sm-9">
 			<div class="row">
 			<div class="col-sm-12">
 				<h4 class="strike-through">
-					<span>Digital Compression Pioneer Award</span>
+					<span>{{ award.title }}</span>
 				</h4>
 				<div class="date pull-right">
 					<em>Awarded</em>
-					2014-11-01
+					{{ award.date }}
 				</div>
 				<div class="awarder">
 					<em>by</em>
-					<strong>Techcrunch</strong>
+					<strong>{{ award.awarder }}</strong>
 				</div>
 				<div class="summary">
-					There is no spoon.
+					{{ award.summary }}
 				</div>
 			</div>
 			</div>
 		</div>
+		{% endfor %}
 	</section>
+	{% endif %}
 
+	{% if resume.publications[0] %}
 	<section id="publications" class="row">
 		<aside class="col-sm-3">
 			<h3>Publications</h3>
 		</aside>
+		{% for pub in resume.publications %}
 		<div class="col-sm-9">
 			<div class="row">
 			<div class="col-sm-12">
 				<h4 class="strike-through">
-					<span>Video compression for 3d media</span>
+					<span>{{ pub.name }}</span>
 					<span class="date">
-						2014-10-01
+						{{ pub.releaseDate }}
 					</span>
 				</h4>
 				<div class="website pull-right">
-					<a href="http://en.wikipedia.org/wiki/Silicon_Valley_(TV_series)"></a>
+					<a href="{{ pub.website }}"></a>
 				</div>
 				<div class="publisher">
 					<em>Published by</em>
-					<strong>Hooli</strong>
+					<strong>{{ pub.publisher }}</strong>
 				</div>
 				<div class="summary">
-					<p>Innovative middle-out compression algorithm that changes the way we store data.</p>
+					<p>{{ pub.summary }}</p>
 				</div>
 			</div>
 			</div>
 		</div>
+		{% endfor %}
 	</section>
+	{% endif %}
 
 	<section id="skills" class="row">
 		<aside class="col-sm-3">
