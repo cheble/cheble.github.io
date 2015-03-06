@@ -1,17 +1,6 @@
-@import url(
-https://fonts.googleapis.com/css?family=Lato:400,700
-);
 body {
 background: #fff;
 margin: 0 0 80px;
-}
-a {
-color: #2ecc71;
-}
-a:focus,
-a:hover {
-color: #f1c40f;
-text-decoration: none;
 }
 p {
 line-height: 1.5;
